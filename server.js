@@ -13,11 +13,11 @@ connectDB();
 
 const app = express(); 
 
-// تكوين CORS بشكل أكثر تحديدًا للسماح بالطلبات من جميع المصادر
+// تكوين CORS للسماح بالطلبات من أي مصدر
 app.use(cors({
-  origin: '*', // السماح لجميع المصادر
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token']
+  allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
 }));
 
 app.use(express.json());
